@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 export const metadata: Metadata = {
   title: "Routing Demo",
   description: "Routing Demo",
@@ -14,7 +12,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header style={{ backgroundColor: "lightblue", padding: "2rem" }}>
+          <h1>Header</h1>
+        </header>
+        {children}{" "}
+        <footer style={{ backgroundColor: "lightgreen", padding: "2rem" }}>
+          <h1>Footer</h1>
+        </footer>
+      </body>
     </html>
   );
 }
